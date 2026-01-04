@@ -1,194 +1,485 @@
-<!--
-https://field-cady.github.io/homepage/
--->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Field Cady - Data Scientist & Researcher</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<img src="img/fieldsface.jpg">
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
 
-<p>
-Hello world!  This is the website for Field Cady.
-I am a data scientist and researcher based on Edmonds, WA.
-I have worked on a diverse set of problems and try to solve
-them in the simplest way possible, but I have been specializing
-in stochastic modeling and machine learning (including deep learning).
-</p>
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
 
-<p>
-Here are my
-<a href="https://www.linkedin.com/in/field-cady-6597786/">LinkedIn</a>
-and
-<a href="https://github.com/field-cady/">GitHub</a>
-pages.
-</p>
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
 
-<h1>Highlights</h1>
-<ul>
-	<li>Published author 2x, with books translated into multiple languages</li>
-	<li>Technical lead for multiple data science / applied research teams</li>
-	<li>Personally built the analytics stack for <a href="https://www.semanticscholar.org/">Semantic Scholar</a></li>
-	<li>Research specialty in stochastic analysis, including an open-source library and multiple academic publications</li>
-	<li>Work has receive extensive media coverage</li>
-	<li>Stanford-educated physicist by training</li>
-</ul>
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
 
+        h1 {
+            color: #667eea;
+            margin: 30px 0 15px 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            font-size: 2em;
+        }
 
-<h1>Consulting</h1>
-I do a limited amount of private consulting, especially on
-<ul>
-	<li>Building data science teams</li>
-	<li>Problems that might be amenable to stochastic approaches</li>
-	<li>Problems that are in a really interesting domain of application</li>
-</ul>
-Feel free to reach out if you'd like to discuss a project!
+        header h1 {
+            color: white;
+            border: none;
+            margin: 0;
+        }
 
-<h1>Books</h1>
+        h2 {
+            color: #764ba2;
+            margin: 20px 0 10px 0;
+            font-size: 1.5em;
+        }
 
-<table>
-  <tr>
-    <td><img height=150px src="img/the_data_science_handbook_cover.jpg"></td>
-    <td><h2><a href="https://www.wiley.com/en-us/The+Data+Science+Handbook%2C+2nd+Edition-p-9781394234493">
-        The Data Science Handbook
-        </a></h2>
-        <p>
-		A self-contained overview of Data Science, this book covers the math, programming
-		and business.  
-        Currently in its 2nd Edition.
-		<p>Also available in 
-		<a href="https://www.amazon.com/Data-science-manual-Chinese-Field/dp/7111619110">Chinese</a>
-	  	and
-		<a href="https://www.yes24.com/product/goods/58543297">Korean</a>,
-		</p>
-		<p>Published by Wiley & Sons</p>
-    </td>
-  </tr>
-  <tr>
-    <td><img height=150px src="img/data_science_the_executive_summary_cover.jpg"></td>
-    <td>
-      <h2><a href="https://www.wiley.com/en-us/Data+Science%3A+The+Executive+Summary+A+Technical+Book+for+Non+Technical+Professionals-p-9781119544081">
-      Data Science: the Executive Summary
-      </a></h2>
-      <p>
-        This for people who don't personally want to do data science, but need to leverage it in their organization.
-        It gives a broad overview of the tools and techniques of data science, including the technical depth needed to critique models,
-        interpret analytical results yourself, and see through bullshit.
-	Also available <a href="https://www.youbeli.com/e695b8e6939ae7a791e5adb8e59586e6a5ade5afa6e688b0-p-5934181.html?language=en">in Chinese</a>.
-	<p>Published by Wiley & Sons</p>
-      </p>
-      </td>
-  </tr>
-  <tr>
-    <td><img height=150px src="img/what_is_math_cover.jpg"></td>
-    <td><h2><a href="https://field-cady.github.io/what_is_math_pdf/">
-        What is Math?
-        </a></h2>
-        <p>
-          This contains prettymuch everything I have to say about math, cognition and language, as well as
-          awesome historical context and personal anecdotes.  If you are interested in the human side of math,
-          then I encourage you to check it out.
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
 
-          Having spent most of my life working with math in one form or another,
-          I am convinced that curious people of all backgrounds could benefit from a novel take on the subject.
-          There are a lot of mis-conceptions out there, in everybody from math-phobes to professional researchers.
-          Even if you don't end up agreeing with my thesis, the book covers a fascinating range of topics, and I
-          think there will be something new and exciting for everyone.
-		<p>Self-published</p>
-        </p>
-    </td>
-  </tr>
-</table>
+        .intro {
+            font-size: 1.1em;
+            padding: 20px;
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
 
+        .social-links {
+            margin: 20px 0;
+            text-align: center;
+        }
 
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 20px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: 2px solid white;
+        }
 
+        .social-links a:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
 
+        ul {
+            margin: 15px 0 15px 30px;
+        }
 
-<h1>Selected Scholarly Articles</h1>
-<a href="http://www.hindawi.com/journals/ijsa/2011/390548/">
-A Stochastic Analysis of Hard Disks
-</a>
-: I wrote this with people at CMU, and it calculates that average wait time for hard disks under certain assumptions.
-It turns out to be a very subtle problem; many previously published papers botched the math.
+        ul li {
+            margin-bottom: 10px;
+            padding-left: 10px;
+            position: relative;
+        }
 
-<p>
-<a href="http://arxiv.org/abs/1211.0897">
-An Elementary Derivation of Mean Wait Time in Polling Systems
-</a>
-: This paper, which I only put on ArXiv, generalizes the previous one to general polling systems.
+        ul li::marker {
+            color: #667eea;
+            font-weight: bold;
+        }
 
-<p>
-<a href="http://iopscience.iop.org/1478-3975/6/3/036011">
-Open-system thermodynamic analysis of DNA polymerase fidelity
-</a>
-: Blast from the past!  This was written back when I was at UW.  I show the critical and under-appreciated role
-that thermodynamics plays in the low mutation rate of DNA when cells divide.
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
 
+        a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
 
+        .book-table {
+            width: 100%;
+            margin: 20px 0;
+        }
 
-<h1>Other Articles</h1>
+        .book-row {
+            display: flex;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
 
+        .book-row:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
 
-<a href="https://blog.allenai.org/china-to-overtake-us-in-ai-research-8b6b1fe30595">
-China May Overtake US in AI Research
-</a>
-: This is an article that I wrote while at the Allen Institute for Artificial Intelligence.
-It analyzes a large corpus of scholarly work to show that China is on-track to overtake the US in AI research,
-even when you look at only the most important research.
-The article was widely covered in the press, including
-<a href="https://www.wsj.com/articles/china-gains-on-u-s-in-highly-cited-ai-research-11552485601?mod=searchresults&page=1&pos=1">WSJ</a>
-, 
-<a href="https://www.wired.com/story/china-catching-up-us-in-ai-research/">Wired</a>
-, 
-<a href="https://www.technologyreview.com/s/613089/the-out-there-ai-ideas-designed-to-keep-the-us-ahead-of-china/">MIT Tech Review</a>
-, and
-<a href="https://www.geekwire.com/2019/ai2-china-us-research/">GeekWire</a>
-.
+        .book-cover {
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
 
-<p>
-A <a href="https://medium.com/@field.cady/hmm-tutorial-series-d0034e70194f">tutorial series</a> on Hidden Markov models,
-their applications, and variants of them
+        .book-cover img {
+            height: 200px;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
 
-<p>
-<a href="https://www.idgconnect.com/article/3580110/big-data-the-jetsons-not-minority-report.html">
-Big Data: The Jetsons, Not Minority Report
-<a>is an article that I wrote about Big Data for IDG.
+        .book-info {
+            flex-grow: 1;
+        }
 
+        .book-info h2 {
+            margin-top: 0;
+        }
 
-<h1>Talks</h1>
-A lot of the public stuff I do is at conferences where it doesn't get recorded.  However, some of my work has found its way online.
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
+        }
 
-<p>
-<a href="https://www.youtube.com/watch?v=3yaIOsjiSm0&list=UUwXhRbDtW--SXdlKQj0Ls9A">
-Python for Data Science
-</a>
-: Python is, IMHO, the best general-purpose programming language for data science.  This talk gives some tips for how to get the most out of it.
+        .article-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            border-left: 3px solid #764ba2;
+        }
 
-<p>
-<a href="https://www.youtube.com/watch?v=Igvcs_BEdTs&list=UUwXhRbDtW--SXdlKQj0Ls9A">
-Relational Algebra and the Pig Language
-</a>
-: This talk gives an overview of relational algebra, which is the theoretical underpinning for most modern databases and most Hadoop wrapper languages.  It's cool stuff, and worth being familiar with if you want a deeper understanding of these tools.  Wow, I can't believe that I used to work with Pig - I feel like a dinosaur!
+        .article-item:hover {
+            background: #e9ecef;
+        }
 
-<p>
-<a href="https://livestream.com/metis/events/8100988">
-The Accidental Data Scientist
-</a>
-: A talk I gave at the Metis bootcamp giving advice to people just about the start their careers as data scientists.
+        section {
+            margin-bottom: 40px;
+        }
 
-<h1>Other</h1>
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            background: #667eea;
+            color: white;
+            border-radius: 3px;
+            font-size: 0.85em;
+            margin-left: 5px;
+        }
 
-<p>
-<a href="https://pypi.org/project/cthmm/#description">CtHMM</a>
-: a python library I developed that supports continuous-time Hidden MArkov Models.
-Basically it's HMMs but with irregularly-spaced observations, super useful in situations
-like medicine or customer interactions where observations arrive at irregular intervals,
-rather than a fixed schedule.
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9em;
+        }
 
-<p>
-<a href="https://patents.google.com/patent/US10162881B2/">Patent US10162881B2</a>
-for machine-assisted discovery of join keys between different datasets.
-I led the team at Maana that developed this patent and
-integrated it into our production code.
+        @media (max-width: 768px) {
+            .book-row {
+                flex-direction: column;
+            }
 
-<!--<p>
-An <a href="https://field-cady.github.io/overabundant_lakes/">interactive map</a>
-I made of all overstocked alpine lakes in Washington state.
-  A <a href="https://field-cady.github.io/mapweaver/esdm">similar map</a>
-  showing all licensed ESDM autism therapists worldwide.-->
+            .book-cover {
+                margin-bottom: 15px;
+                text-align: center;
+            }
+
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="img/fieldsface.jpg" alt="Field Cady" class="profile-img">
+            <h1>Field Cady</h1>
+            <p style="font-size: 1.2em; margin-top: 10px;">Data Scientist & Researcher</p>
+            <p>Edmonds, WA</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/field-cady-6597786/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/field-cady/" target="_blank">GitHub</a>
+            </div>
+        </header>
+
+        <section class="intro">
+            <p>
+                Hello world! I am a data scientist and researcher based in Edmonds, WA.
+                I have worked on a diverse set of problems and try to solve
+                them in the simplest way possible, but I have been specializing
+                in stochastic modeling and machine learning (including deep learning).
+            </p>
+        </section>
+
+        <section>
+            <h1>Highlights</h1>
+            <div class="highlight-box">
+                <ul>
+                    <li>Published author 2x, with books translated into multiple languages</li>
+                    <li>Technical lead for multiple data science / applied research teams</li>
+                    <li>Personally built the analytics stack for <a href="https://www.semanticscholar.org/">Semantic Scholar</a></li>
+                    <li>Research specialty in stochastic analysis, including an open-source library and multiple academic publications</li>
+                    <li>Work has received extensive media coverage</li>
+                    <li>Stanford-educated physicist by training</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h1>Consulting</h1>
+            <p>I do a limited amount of private consulting, especially on:</p>
+            <ul>
+                <li>Building data science teams</li>
+                <li>Problems that might be amenable to stochastic approaches</li>
+                <li>Problems that are in a really interesting domain of application</li>
+            </ul>
+            <p>Feel free to reach out if you'd like to discuss a project!</p>
+        </section>
+
+        <section>
+            <h1>Books</h1>
+
+            <div class="book-table">
+                <div class="book-row">
+                    <div class="book-cover">
+                        <img src="img/the_data_science_handbook_cover.jpg" alt="The Data Science Handbook">
+                    </div>
+                    <div class="book-info">
+                        <h2><a href="https://www.wiley.com/en-us/The+Data+Science+Handbook%2C+2nd+Edition-p-9781394234493">
+                            The Data Science Handbook
+                        </a></h2>
+                        <p>
+                            A self-contained overview of Data Science, this book covers the math, programming
+                            and business. Currently in its 2nd Edition.
+                        </p>
+                        <p>
+                            Also available in 
+                            <a href="https://www.amazon.com/Data-science-manual-Chinese-Field/dp/7111619110">Chinese</a>
+                            and
+                            <a href="https://www.yes24.com/product/goods/58543297">Korean</a>
+                        </p>
+                        <p><span class="badge">Published by Wiley & Sons</span></p>
+                    </div>
+                </div>
+
+                <div class="book-row">
+                    <div class="book-cover">
+                        <img src="img/data_science_the_executive_summary_cover.jpg" alt="Data Science: The Executive Summary">
+                    </div>
+                    <div class="book-info">
+                        <h2><a href="https://www.wiley.com/en-us/Data+Science%3A+The+Executive+Summary+A+Technical+Book+for+Non+Technical+Professionals-p-9781119544081">
+                            Data Science: The Executive Summary
+                        </a></h2>
+                        <p>
+                            This is for people who don't personally want to do data science, but need to leverage it in their organization.
+                            It gives a broad overview of the tools and techniques of data science, including the technical depth needed to critique models,
+                            interpret analytical results yourself, and see through bullshit.
+                        </p>
+                        <p>
+                            Also available <a href="https://www.youbeli.com/e695b8e6939ae7a791e5adb8e59586e6a5ade5afa6e688b0-p-5934181.html?language=en">in Chinese</a>
+                        </p>
+                        <p><span class="badge">Published by Wiley & Sons</span></p>
+                    </div>
+                </div>
+
+                <div class="book-row">
+                    <div class="book-cover">
+                        <img src="img/what_is_math_cover.jpg" alt="What is Math?">
+                    </div>
+                    <div class="book-info">
+                        <h2><a href="https://field-cady.github.io/what_is_math_pdf/">
+                            What is Math?
+                        </a></h2>
+                        <p>
+                            This contains pretty much everything I have to say about math, cognition and language, as well as
+                            awesome historical context and personal anecdotes. If you are interested in the human side of math,
+                            then I encourage you to check it out.
+                        </p>
+                        <p>
+                            Having spent most of my life working with math in one form or another,
+                            I am convinced that curious people of all backgrounds could benefit from a novel take on the subject.
+                            There are a lot of misconceptions out there, in everybody from math-phobes to professional researchers.
+                            Even if you don't end up agreeing with my thesis, the book covers a fascinating range of topics, and I
+                            think there will be something new and exciting for everyone.
+                        </p>
+                        <p><span class="badge">Self-published</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h1>Selected Scholarly Articles</h1>
+            
+            <div class="article-item">
+                <h3><a href="http://www.hindawi.com/journals/ijsa/2011/390548/">
+                    A Stochastic Analysis of Hard Disks
+                </a></h3>
+                <p>
+                    I wrote this with people at CMU, and it calculates the average wait time for hard disks under certain assumptions.
+                    It turns out to be a very subtle problem; many previously published papers botched the math.
+                </p>
+            </div>
+
+            <div class="article-item">
+                <h3><a href="http://arxiv.org/abs/1211.0897">
+                    An Elementary Derivation of Mean Wait Time in Polling Systems
+                </a></h3>
+                <p>
+                    This paper, which I only put on ArXiv, generalizes the previous one to general polling systems.
+                </p>
+            </div>
+
+            <div class="article-item">
+                <h3><a href="http://iopscience.iop.org/1478-3975/6/3/036011">
+                    Open-system thermodynamic analysis of DNA polymerase fidelity
+                </a></h3>
+                <p>
+                    Blast from the past! This was written back when I was at UW. I show the critical and under-appreciated role
+                    that thermodynamics plays in the low mutation rate of DNA when cells divide.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h1>Other Articles</h1>
+
+            <div class="article-item">
+                <h3><a href="https://blog.allenai.org/china-to-overtake-us-in-ai-research-8b6b1fe30595">
+                    China May Overtake US in AI Research
+                </a></h3>
+                <p>
+                    This is an article that I wrote while at the Allen Institute for Artificial Intelligence.
+                    It analyzes a large corpus of scholarly work to show that China is on-track to overtake the US in AI research,
+                    even when you look at only the most important research.
+                    The article was widely covered in the press, including
+                    <a href="https://www.wsj.com/articles/china-gains-on-u-s-in-highly-cited-ai-research-11552485601?mod=searchresults&page=1&pos=1">WSJ</a>,
+                    <a href="https://www.wired.com/story/china-catching-up-us-in-ai-research/">Wired</a>,
+                    <a href="https://www.technologyreview.com/s/613089/the-out-there-ai-ideas-designed-to-keep-the-us-ahead-of-china/">MIT Tech Review</a>,
+                    and
+                    <a href="https://www.geekwire.com/2019/ai2-china-us-research/">GeekWire</a>.
+                </p>
+            </div>
+
+            <div class="article-item">
+                <h3><a href="https://medium.com/@field.cady/hmm-tutorial-series-d0034e70194f">Hidden Markov Models Tutorial Series</a></h3>
+                <p>
+                    A tutorial series on Hidden Markov models, their applications, and variants of them.
+                </p>
+            </div>
+
+            <div class="article-item">
+                <h3><a href="https://www.idgconnect.com/article/3580110/big-data-the-jetsons-not-minority-report.html">
+                    Big Data: The Jetsons, Not Minority Report
+                </a></h3>
+                <p>
+                    An article that I wrote about Big Data for IDG.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h1>Talks</h1>
+            <p>A lot of the public stuff I do is at conferences where it doesn't get recorded. However, some of my work has found its way online.</p>
+
+            <div class="article-item">
+                <h3><a href="https://www.youtube.com/watch?v=3yaIOsjiSm0&list=UUwXhRbDtW--SXdlKQj0Ls9A">
+                    Python for Data Science
+                </a></h3>
+                <p>
+                    Python is, IMHO, the best general-purpose programming language for data science. This talk gives some tips for how to get the most out of it.
+                </p>
+            </div>
+
+            <div class="article-item">
+                <h3><a href="https://www.youtube.com/watch?v=Igvcs_BEdTs&list=UUwXhRbDtW--SXdlKQj0Ls9A">
+                    Relational Algebra and the Pig Language
+                </a></h3>
+                <p>
+                    This talk gives an overview of relational algebra, which is the theoretical underpinning for most modern databases and most Hadoop wrapper languages.
+                    It's cool stuff, and worth being familiar with if you want a deeper understanding of these tools. Wow, I can't believe that I used to work with Pig - I feel like a dinosaur!
+                </p>
+            </div>
+
+            <div class="article-item">
+                <h3><a href="https://livestream.com/metis/events/8100988">
+                    The Accidental Data Scientist
+                </a></h3>
+                <p>
+                    A talk I gave at the Metis bootcamp giving advice to people just about to start their careers as data scientists.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h1>Other</h1>
+
+            <div class="article-item">
+                <h3><a href="https://pypi.org/project/cthmm/#description">CtHMM</a></h3>
+                <p>
+                    A Python library I developed that supports continuous-time Hidden Markov Models.
+                    Basically it's HMMs but with irregularly-spaced observations, super useful in situations
+                    like medicine or customer interactions where observations arrive at irregular intervals,
+                    rather than a fixed schedule.
+                </p>
+            </div>
+
+            <div class="article-item">
+                <h3><a href="https://patents.google.com/patent/US10162881B2/">Patent US10162881B2</a></h3>
+                <p>
+                    For machine-assisted discovery of join keys between different datasets.
+                    I led the team at Maana that developed this patent and
+                    integrated it into our production code.
+                </p>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 Field Cady. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
