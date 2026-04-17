@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -280,11 +281,23 @@
             }
         }
     </style>
-</head>
 
+<style>
+        .layout-v12 { display: flex; gap: 30px; margin-top: 20px; }
+        .sidebar-v12 { flex: 0 0 200px; display: flex; flex-direction: column; gap: 10px; }
+        .sidebar-v12 button { background-color: #f1f1f1; border: none; padding: 15px; width: 100%; text-align: left; cursor: pointer; font-size: 16px; border-radius: 8px; font-weight: bold; color: #555; transition: 0.3s; }
+        .sidebar-v12 button:hover { background-color: #ddd; }
+        .sidebar-v12 button.active { background-color: #764ba2; color: white; }
+        .main-content-v12 { flex: 1; background: #fdfdfd; border-radius: 8px; border: 1px solid #eee; min-height: 400px; }
+        .essays-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .essay-card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background: white; }
+        .essay-card h3 { margin-top: 0; }
+        </style>
+</head>
 <body>
-    <div class="container">
-        <header>
+    
+        <div class="container">
+            <header>
             <div class="header-content">
                 <img src="img/fieldsface.jpg" alt="Field Cady" class="profile-img">
                 <div class="header-text">
@@ -298,6 +311,17 @@
                 <a href="https://github.com/field-cady/" target="_blank">GitHub</a>
             </div>
         </header>
+            <div class="layout-v12">
+                <div class="sidebar-v12">
+                    <button class="tablinks active" onclick="openTab(event, 'Home')">Home</button>
+                    <button class="tablinks" onclick="openTab(event, 'BooksAndEssays')">Books</button>
+                    <button class="tablinks" onclick="openTab(event, 'Scholarly')">Articles</button>
+                    <button class="tablinks" onclick="openTab(event, 'DeepFakes')">DeepFakes & Consulting</button>
+                    <button class="tablinks" onclick="openTab(event, 'Projects')">Projects</button>
+                    <button class="tablinks" onclick="openTab(event, 'Other')">Other</button>
+                </div>
+                <div class="main-content-v12">
+                    <div id="Home" class="tabcontent" style="display:block; padding: 20px;">
 
         <section class="intro">
             <p>
@@ -326,27 +350,56 @@
             </div>
         </section>
 
-        <section>
-            <h1>DeepFakes and Consulting</h1>
-            <p>Building on my work at <a href="https://www.truemedia.org/">True Media</a>
-                I have been building and licensing datasets of DeepFakes to help
-                with training / measuring DeepFake detection models.
-                I monitor social media to identify new ways that people are
-                making deepfakes, so that models can capture htem before
-                they are widely used by scammers.
-                I also have a patent-pending method for generating
-                training datasets tailored to specific verticals.
-            </p>
-            <p>Previously I have consulted on a range of other projects, such as:</p>
-            <ul>
-                <li>Building data science teams</li>
-                <li>Behavior classification in oil wells</li>
-                <li>Analysis of biomedical images</li>
-            </ul>
-            <p>Feel free to reach out if you'd like to discuss a project!</p>
-        </section>
+        
 
-        <section>
+        
+
+        
+
+        <!-- <section>
+            <h1>Talks</h1>
+            <p>A lot of the public stuff I do is at conferences where it doesn't get recorded. However, some of my work
+                has found its way online.</p>
+
+            <div class="article-item">
+                <h3><a href="https://www.youtube.com/watch?v=3yaIOsjiSm0&list=UUwXhRbDtW--SXdlKQj0Ls9A">
+                        Python for Data Science
+                    </a></h3>
+                <p>
+                    Python is, IMHO, the best general-purpose programming language for data science. This talk gives
+                    some tips for how to get the most out of it.
+                </p>
+            </div>
+
+            <div class="article-item">
+                <h3><a href="https://www.youtube.com/watch?v=Igvcs_BEdTs&list=UUwXhRbDtW--SXdlKQj0Ls9A">
+                        Relational Algebra and the Pig Language
+                    </a></h3>
+                <p>
+                    This talk gives an overview of relational algebra, which is the theoretical underpinning for most
+                    modern databases and most Hadoop wrapper languages.
+                    It's cool stuff, and worth being familiar with if you want a deeper understanding of these tools.
+                    Wow, I can't believe that I used to work with Pig - I feel like a dinosaur!
+                </p>
+            </div>
+
+            <div class="article-item">
+                <h3><a href="https://livestream.com/metis/events/8100988">
+                        The Accidental Data Scientist
+                    </a></h3>
+                <p>
+                    A talk I gave at the Metis bootcamp giving advice to people just about to start their careers as
+                    data scientists.
+                </p>
+            </div>
+        </section> -->
+
+        
+
+</div>
+                    
+<div id="BooksAndEssays" class="tabcontent" style="display:none; padding: 20px;">
+    
             <h1>Books</h1>
 
             <div class="book-table">
@@ -417,9 +470,37 @@
                     </div>
                 </div>
             </div>
-        </section>
+        
 
-        <section>
+        
+    
+    
+
+</div>
+<div id="DeepFakes" class="tabcontent" style="display:none; padding: 20px;">
+<section>
+            <h1>DeepFakes and Consulting</h1>
+            <p>Building on my work at <a href="https://www.truemedia.org/">True Media</a>
+                I have been building and licensing datasets of DeepFakes to help
+                with training / measuring DeepFake detection models.
+                I monitor social media to identify new ways that people are
+                making deepfakes, so that models can capture htem before
+                they are widely used by scammers.
+                I also have a patent-pending method for generating
+                training datasets tailored to specific verticals.
+            </p>
+            <p>Previously I have consulted on a range of other projects, such as:</p>
+            <ul>
+                <li>Building data science teams</li>
+                <li>Behavior classification in oil wells</li>
+                <li>Analysis of biomedical images</li>
+            </ul>
+            <p>Feel free to reach out if you'd like to discuss a project!</p>
+        </section>
+</div>
+
+<div id="Scholarly" class="tabcontent" style="display:none; padding: 20px;">
+<section>
             <h1>Selected Scholarly Articles</h1>
 
             <div class="article-item">
@@ -455,7 +536,9 @@
 
         </section>
 
-        <section>
+
+
+<section>
             <h1>Other Articles</h1>
 
             <div class="article-item">
@@ -496,69 +579,10 @@
                 </p>
             </div> -->
         </section>
+</div>
 
-        <!-- <section>
-            <h1>Talks</h1>
-            <p>A lot of the public stuff I do is at conferences where it doesn't get recorded. However, some of my work
-                has found its way online.</p>
-
-            <div class="article-item">
-                <h3><a href="https://www.youtube.com/watch?v=3yaIOsjiSm0&list=UUwXhRbDtW--SXdlKQj0Ls9A">
-                        Python for Data Science
-                    </a></h3>
-                <p>
-                    Python is, IMHO, the best general-purpose programming language for data science. This talk gives
-                    some tips for how to get the most out of it.
-                </p>
-            </div>
-
-            <div class="article-item">
-                <h3><a href="https://www.youtube.com/watch?v=Igvcs_BEdTs&list=UUwXhRbDtW--SXdlKQj0Ls9A">
-                        Relational Algebra and the Pig Language
-                    </a></h3>
-                <p>
-                    This talk gives an overview of relational algebra, which is the theoretical underpinning for most
-                    modern databases and most Hadoop wrapper languages.
-                    It's cool stuff, and worth being familiar with if you want a deeper understanding of these tools.
-                    Wow, I can't believe that I used to work with Pig - I feel like a dinosaur!
-                </p>
-            </div>
-
-            <div class="article-item">
-                <h3><a href="https://livestream.com/metis/events/8100988">
-                        The Accidental Data Scientist
-                    </a></h3>
-                <p>
-                    A talk I gave at the Metis bootcamp giving advice to people just about to start their careers as
-                    data scientists.
-                </p>
-            </div>
-        </section> -->
-
-        <section>
-            <h1>Other</h1>
-
-            <div class="article-item">
-                <h3><a href="https://pypi.org/project/cthmm/#description">CtHMM</a></h3>
-                <p>
-                    A Python library I developed that supports continuous-time Hidden Markov Models.
-                    Basically it's HMMs but with irregularly-spaced observations - super useful in situations
-                    like medicine or customer interactions where observations arrive at irregular intervals,
-                    rather than a fixed schedule.
-                </p>
-            </div>
-
-            <div class="article-item">
-                <h3><a href="https://patents.google.com/patent/US10162881B2/">Patent US10162881B2</a></h3>
-                <p>
-                    For machine-assisted discovery of join keys between different datasets.
-                    I led the team at Maana that developed this patent and
-                    integrated it into our production code.
-                </p>
-            </div>
-        </section>
-
-        <section>
+<div id="Projects" class="tabcontent" style="display:none; padding: 20px;">
+<section>
             <h1>Fun Projects</h1>
 
             <div class="article-item">
@@ -592,15 +616,56 @@
             </div>
 
         </section>
-        
-        <footer>
+</div>
+
+
+<div id="Other" class="tabcontent" style="display:none; padding: 20px;">
+<section>
+            <h1>Other</h1>
+
+            <div class="article-item">
+                <h3><a href="https://pypi.org/project/cthmm/#description">CtHMM</a></h3>
+                <p>
+                    A Python library I developed that supports continuous-time Hidden Markov Models.
+                    Basically it's HMMs but with irregularly-spaced observations - super useful in situations
+                    like medicine or customer interactions where observations arrive at irregular intervals,
+                    rather than a fixed schedule.
+                </p>
+            </div>
+
+            <div class="article-item">
+                <h3><a href="https://patents.google.com/patent/US10162881B2/">Patent US10162881B2</a></h3>
+                <p>
+                    For machine-assisted discovery of join keys between different datasets.
+                    I led the team at Maana that developed this patent and
+                    integrated it into our production code.
+                </p>
+            </div>
+        </section>
+</div>
+
+                </div>
+            </div>
+<footer>
             <p>© 2026 Field Cady. All rights reserved.</p>
         </footer>
-    </div>
-</body>
+        </div>
 
-</html>oter>
-    </div>
+<script>
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
 </body>
 
 </html>
