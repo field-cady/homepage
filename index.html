@@ -501,55 +501,21 @@
 
 <div id="Scholarly" class="tabcontent" style="display:none; padding: 20px;">
 <section>
-            <h1>Selected Scholarly Articles</h1>
-
-            <div class="article-item">
-                <h3><a href="http://iopscience.iop.org/1478-3975/6/3/036011">
-                        Open-system thermodynamic analysis of DNA polymerase fidelity
-                    </a></h3>
-                <p>
-                    Blast from the past! This was written back when I was at UW. I show the critical and
-                    under-appreciated role
-                    that thermodynamics plays in the low mutation rate of DNA when cells divide.
-                </p>
-            </div>
-
-            <div class="article-item">
-                <h3><a href="http://www.hindawi.com/journals/ijsa/2011/390548/">
-                        A Stochastic Analysis of Hard Disks
-                    </a></h3>
-                <p>
-                    I wrote this with people at CMU, and it calculates the average wait time for hard disks under
-                    certain assumptions.
-                    It turns out to be a very subtle problem; many previously published papers botched the math.
-                </p>
-            </div>
-
-            <div class="article-item">
-                <h3><a href="http://arxiv.org/abs/1211.0897">
-                        An Elementary Derivation of Mean Wait Time in Polling Systems
-                    </a></h3>
-                <p>
-                    This paper, which I only put on ArXiv, generalizes the previous one to general polling systems.
-                </p>
-            </div>
-
-        </section>
-
-
-
-<section>
-            <h1>Other Articles</h1>
+            <h1>Selected Articles</h1>
 
             <div class="article-item">
                 <h3><a href="https://blog.allenai.org/china-to-overtake-us-in-ai-research-8b6b1fe30595">
                         China May Overtake US in AI Research
                     </a></h3>
                 <p>
-                    This is an article that I wrote while at the Allen Institute for Artificial Intelligence.
-                    It analyzes a large corpus of scholarly work to show that China is on-track to overtake the US in AI
-                    research,
-                    even when you look at only the most important research.
+                    In 2019, while at the Allen Institute for AI,
+                    I predicted that China was on track to surpass the US as the
+                    leader in cutting-edge AI research in the mid-2020s.
+                    Well, it <a href="https://officechai.com/ai/china-has-surpassed-us-as-the-working-location-of-the-first-author-for-neurips-papers-for-the-first-time/">just happened</a>!
+                    
+                    My original article analyzed a large corpus of scholarly articles,
+                    showing that China's share of top-tier research was
+                    growing steadily.
                     The article was widely covered in the press, including
                     <a
                         href="https://www.wsj.com/articles/china-gains-on-u-s-in-highly-cited-ai-research-11552485601?mod=searchresults&page=1&pos=1">WSJ</a>,
@@ -561,6 +527,49 @@
                     <a href="https://www.geekwire.com/2019/ai2-china-us-research/">GeekWire</a>.
                 </p>
             </div>
+    
+            <div class="article-item">
+                <h3><a href="http://iopscience.iop.org/1478-3975/6/3/036011">
+                        Open-system thermodynamic analysis of DNA polymerase fidelity
+                    </a></h3>
+                <p>
+                    Probably my best purely-academic work!
+                    DNA replication in organisms has an insanely low mutation rate,
+                    which biologists often attribute to "kinetic checkpoints".
+                    I showed that this low mutation rate actually comes at an energetic cost.
+                    In particular, kinetic checkpoints only work in the presence
+                    of a non-equilibrium steady state (NESS) between -
+                    the polymerase reaction degrades the NESS, and the body must
+                    spend energy to maintain it.
+                    To do this analysis I developed a novel variant of Markov chains.
+                </p>
+            </div>
+
+            <div class="article-item">
+                <h3><a href="http://www.hindawi.com/journals/ijsa/2011/390548/">
+                        A Stochastic Analysis of Hard Disks
+                    </a></h3>
+                <p>
+                    I wrote this paper at CMU, computing the average wait time
+                    for requests to an idealized hard disks.
+                    It turns out to be a very subtle problem; many previously published papers botched the math in subtle ways.
+                    I later expanded the technique to 
+                    <a href="http://arxiv.org/abs/1211.0897">polling systems in general</a>a>.
+                </p>
+            </div>
+
+            <!-- <div class="article-item">
+                <h3><a href="http://arxiv.org/abs/1211.0897">
+                        An Elementary Derivation of Mean Wait Time in Polling Systems
+                    </a></h3>
+                <p>
+                    This paper, which I only put on ArXiv, generalizes the previous one to general polling systems.
+                </p>
+            </div> -->
+
+
+            <!-- <h1>Other Articles</h1> -->
+
 
             <div class="article-item">
                 <h3><a href="https://medium.com/@field.cady/hmm-tutorial-series-d0034e70194f">Hidden Markov Models
@@ -595,9 +604,9 @@
             </div>
 
             <div class="article-item">
-                <h3><a href="https://field-cady.github.io/overabundant_lakes/">Alpine Lakes Finder</a></h3>
+                <h3><a href="https://field-cady.github.io/alpine_fishing_pnw/">Alpine Lakes Finder</a></h3>
                 <p>
-                    This is an interactive map of all alpine fishing lakes in Washington state.
+                    This is an interactive map of all alpine fishing lakes in the Pacific Northwest.
                     You can filter by fish species, elevation of the lake, etc.
                     All of this data is technically already available, but I find a map makes
                     it MUCH easier to explore and interact with.
